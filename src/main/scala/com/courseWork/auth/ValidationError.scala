@@ -1,0 +1,13 @@
+package com.courseWork.auth
+
+sealed trait ValidationError
+
+sealed trait UserValidationError extends ValidationError
+
+case object IncorrectEmail extends UserValidationError
+case object UserAlreadyExist extends UserValidationError
+case object PasswordTooLong extends UserValidationError
+case object PasswordTooShort extends UserValidationError
+case object PasswordMissingRequiredCharacters extends UserValidationError
+case object NicknameIsEmpty extends UserValidationError
+case object NicknameTooLong extends UserValidationError
